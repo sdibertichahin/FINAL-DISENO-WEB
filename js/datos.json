@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nombre": "Claude Monet",
+    "movimiento": "Impresionismo",
+    "descripcion": "Pintaba la luz más que las cosas. Volvía una y otra vez al mismo paisaje para atrapar cómo cambiaban el aire, el agua y el color con las horas.",
+    "imagen": "img/retrato-monet.jpg",
+    "color": "celeste"
+  },
+  {
+    "id": 2,
+    "nombre": "Gustav Klimt",
+    "movimiento": "Simbolismo · Secesión vienesa",
+    "descripcion": "Convirtió la pintura en ornamento: oro, patrones y figuras humanas que se funden con fondos decorativos.",
+    "imagen": "img/retrato-klimt.jpg",
+    "color": "amarillo"
+  },
+  {
+    "id": 3,
+    "nombre": "Edvard Munch",
+    "movimiento": "Simbolismo · Precursor del expresionismo",
+    "descripcion": "Pintó lo que se siente, no lo que se ve: la angustia, el deseo y la soledad, con formas que se tuercen y colores que arden.",
+    "imagen": "img/retrato-munch.jpg",
+    "color": "rosa"
+  },
+  {
+    "id": 4,
+    "nombre": "Vincent van Gogh",
+    "movimiento": "Postimpresionismo",
+    "descripcion": "Color puro y pinceladas que nunca se quedan quietas. Paisajes y escenas cotidianas cargados de emoción.",
+    "imagen": "img/retrato-van-gogh.jpg",
+    "color": "petroleo"
+  }
+]

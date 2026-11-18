@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuera de Marco — Un espacio para explorar el arte</title>
+
+  <!-- CSS de Bootstrap 5 (CDN oficial) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Estilos propios (siempre después de Bootstrap) -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg barra border-bottom border-3 border-dark">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center" href="#inicio">
+        <span class="cuadrado-rojo"></span>FUERA DE MARCO
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#artistas">Artistas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#obras">Obras</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre el proyecto</a></li>
+          <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <!-- Botón que abre la ventana modal -->
+            <button type="button" class="btn boton-negro" data-bs-toggle="modal" data-bs-target="#modalArchivo">
+              Sumate al archivo
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============ ENCABEZADO / HERO ============ -->
+  <header id="inicio">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+
+        <!-- Columna de texto -->
+        <div class="col-lg-7">
+          <p class="etiqueta">Archivo digital de pintura · N.º 01</p>
+          <h1 class="titulo-hero">Fuera<br>de <span class="texto-rojo">marco</span></h1>
+          <p class="lead">Un espacio para explorar el arte que se anima a ser diferente.</p>
+          <p class="texto-hero">Cuatro pintores, cuatro maneras de mirar, interpretar y representar el mundo. Un recorrido por la luz, el oro, la angustia y el color.</p>
+          <div class="d-flex flex-wrap">
+            <a href="#artistas" class="btn boton-negro me-3 mb-3">Explorar artistas</a>
+            <button type="button" class="btn boton-borde mb-3" data-bs-toggle="modal" data-bs-target="#modalArchivo">Sumate</button>
+          </div>
+        </div>
+
+        <!-- Columna de imagen -->
+        <div class="col-lg-5">
+          <figure class="figure marco-amarillo border border-2 border-dark w-100 mb-0">
+            <img src="img/munch 2.jpeg" class="figure-img img-fluid w-100 mb-0" alt="Summer by the Sea, de Edvard Munch">
+            <figcaption class="figure-caption">Edvard Munch — <em>Summer by the Sea</em>, 1902–1903</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Franja con la paleta de colores -->
+    <div class="d-flex">
+      <div class="franja-color fondo-rojo"></div>
+      <div class="franja-color fondo-celeste"></div>
+      <div class="franja-color fondo-amarillo"></div>
+      <div class="franja-color fondo-negro"></div>
+      <div class="franja-color fondo-rosa"></div>
+      <div class="franja-color fondo-petroleo"></div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ============ SECCIÓN 1: ARTISTAS (se genera con fetch) ============ -->
+    <section id="artistas" class="seccion">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end border-bottom border-3 border-dark pb-3 mb-5">
+          <h2 class="titulo-seccion">Cuatro formas<br>de mirar</h2>
+          <p class="etiqueta mb-0">01 — Artistas</p>
+        </div>
+
+        <!-- Acá JavaScript inyecta las tarjetas desde js/datos.json -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="contenedor-artistas">
+          <p>Cargando artistas...</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ SECCIÓN 2: OBRAS ============ -->
+    <section id="obras" class="seccion pt-0">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end border-bottom border-3 border-dark pb-3 mb-5">
+          <h2 class="titulo-seccion">El arte no entra<br>en un solo marco</h2>
+          <p class="etiqueta mb-0">02 — Obras</p>
+        </div>
+
+        <!-- Obra 01 -->
+        <div class="row g-0 obra border border-2 border-dark">
+          <div class="col-md-7">
+            <img src="img/obra-monet.jpg" class="img-fluid w-100" alt="Impresión, sol naciente, de Claude Monet">
+          </div>
+          <div class="col-md-5 obra-texto borde-celeste d-flex flex-column justify-content-end">
+            <p class="numero-obra">01</p>
+            <h3 class="titulo-obra">Impresión, sol naciente</h3>
+            <p class="etiqueta">Claude Monet</p>
+            <p class="datos-obra">1872 · Óleo sobre lienzo · Musée Marmottan Monet, París</p>
+            <p class="mb-0">El puerto de Le Havre al amanecer, apenas sugerido con manchas de color. Un crítico usó su título para burlarse de la exposición de 1874, y el nombre terminó bautizando al Impresionismo.</p>
+          </div>
+        </div>
+
+        <!-- Obra 02 -->
+        <div class="row g-0 obra border border-2 border-dark">
+          <div class="col-md-7">
+            <img src="img/obra-klimt.jpg" class="img-fluid w-100" alt="El beso, de Gustav Klimt">
+          </div>
+          <div class="col-md-5 obra-texto borde-amarillo d-flex flex-column justify-content-end">
+            <p class="numero-obra">02</p>
+            <h3 class="titulo-obra">El beso</h3>
+            <p class="etiqueta">Gustav Klimt</p>
+            <p class="datos-obra">1907–1908 · Óleo y pan de oro sobre lienzo · Belvedere, Viena</p>
+            <p class="mb-0">La obra central de su "período dorado". Dos figuras se funden en un mismo manto: formas rectangulares para él, círculos y flores para ella, sobre un fondo de oro.</p>
+          </div>
+        </div>
+
+        <!-- Obra 03 -->
+        <div class="row g-0 obra border border-2 border-dark">
+          <div class="col-md-7">
+            <img src="img/obra-munch.jpg" class="img-fluid w-100" alt="El grito, de Edvard Munch">
+          </div>
+          <div class="col-md-5 obra-texto borde-rosa d-flex flex-column justify-content-end">
+            <p class="numero-obra">03</p>
+            <h3 class="titulo-obra">El grito</h3>
+            <p class="etiqueta">Edvard Munch</p>
+            <p class="datos-obra">1893 · Témpera y crayón sobre cartón · Nasjonalmuseet, Oslo</p>
+            <p class="mb-0">Nace de un paseo al atardecer en el que Munch sintió un grito atravesando la naturaleza. Hizo varias versiones del motivo; esta es la primera pintada y la más conocida.</p>
+          </div>
+        </div>
+
+        <!-- Obra 04 -->
+        <div class="row g-0 obra border border-2 border-dark mb-0">
+          <div class="col-md-7">
+            <img src="img/obra-van-gogh.jpg" class="img-fluid w-100" alt="Terraza de café por la noche, de Vincent van Gogh">
+          </div>
+          <div class="col-md-5 obra-texto borde-petroleo d-flex flex-column justify-content-end">
+            <p class="numero-obra">04</p>
+            <h3 class="titulo-obra">Terraza de café por la noche</h3>
+            <p class="etiqueta">Vincent van Gogh</p>
+            <p class="datos-obra">1888 · Óleo sobre lienzo · Museo Kröller-Müller, Otterlo</p>
+            <p class="mb-0">Pintada en Arles, al aire libre y de noche. Van Gogh contó que era un cuadro nocturno sin nada de negro: solo azules, violetas y verdes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ SECCIÓN 3: SOBRE EL PROYECTO ============ -->
+    <section id="sobre" class="seccion sobre border-top border-bottom border-3 border-dark">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-5">
+            <img src="img/monet 3.jpg" class="img-fluid w-100 border border-2 border-dark" alt="Detalle del sol en Impresión, sol naciente, de Claude Monet">
+          </div>
+          <div class="col-md-7 d-flex flex-column justify-content-center">
+            <p class="etiqueta">03 — Sobre el proyecto</p>
+            <h2 class="titulo-seccion mb-4">Mirar más allá</h2>
+            <p><strong>Fuera de Marco</strong> es un archivo digital que invita a mirar el arte de otra manera.</p>
+            <p>Monet, Klimt, Munch y Van Gogh transformaron la pintura a través del color, la luz, las formas y las emociones. Cada uno encontró su propio lenguaje, y cada obra propone algo más que una imagen: una forma distinta de percibir el mundo.</p>
+            <p class="cita">Porque una obra no termina en su marco: sigue en quien la mira.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="pie">
+    <div class="container py-5">
+      <div class="row g-4">
+
+        <!-- Marca + navegación interna -->
+        <div class="col-lg-5">
+          <p class="marca-pie mb-2">FUERA DE MARCO</p>
+          <p>Toda obra empieza donde termina el marco.</p>
+          <ul class="links-pie list-unstyled d-flex flex-wrap mb-0">
+            <li class="me-4"><a href="#inicio">Inicio</a></li>
+            <li class="me-4"><a href="#artistas">Artistas</a></li>
+            <li class="me-4"><a href="#obras">Obras</a></li>
+            <li><a href="#sobre">Sobre el proyecto</a></li>
+          </ul>
+        </div>
+
+        <!-- Enlaces externos a los museos de cada obra -->
+        <div class="col-md-8 col-lg-7">
+          <p class="etiqueta titulo-pie">Dónde ver las obras</p>
+          <ul class="museos list-unstyled mb-0">
+            <li class="d-flex justify-content-between align-items-center border-bottom border-secondary py-2">
+              <a href="https://www.marmottan.fr" target="_blank">Musée Marmottan Monet</a>
+              <span>París</span>
+            </li>
+            <li class="d-flex justify-content-between align-items-center border-bottom border-secondary py-2">
+              <a href="https://www.belvedere.at" target="_blank">Belvedere</a>
+              <span>Viena</span>
+            </li>
+            <li class="d-flex justify-content-between align-items-center border-bottom border-secondary py-2">
+              <a href="https://www.nasjonalmuseet.no" target="_blank">Nasjonalmuseet</a>
+              <span>Oslo</span>
+            </li>
+            <li class="d-flex justify-content-between align-items-center py-2">
+              <a href="https://krollermuller.nl" target="_blank">Museo Kröller-Müller</a>
+              <span>Otterlo</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <hr>
+      <p class="legal mb-0">© 2026 · Fuera de Marco · Todos los derechos reservados </p>
+    </div>
+  </footer>
+
+
+  <!-- ============ VENTANA MODAL + FORMULARIO ============ -->
+  <div class="modal fade" id="modalArchivo" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sumate al archivo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Dejanos tus datos y contanos qué artista te mueve más.</p>
+
+          <!-- Formulario con validación de Bootstrap + envío con Web3Forms -->
+          <form class="needs-validation" novalidate action="https://api.web3forms.com/submit" method="POST">
+            <!-- Clave de Web3Forms: reemplazar por la que llega al mail -->
+            <input type="hidden" name="access_key" value="PEGAR-ACA-TU-ACCESS-KEY">
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" minlength="2" required>
+              <div class="invalid-feedback">Ingresá tu nombre.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="nombre@email.com" required>
+              <div class="invalid-feedback">Ingresá un email válido.</div>
+            </div>
+
+            <div class="mb-4">
+              <label for="artista" class="form-label">Artista favorito</label>
+              <select class="form-select" id="artista" name="artista" required>
+                <option value="" selected disabled>Elegí un artista</option>
+                <option value="Claude Monet">Claude Monet</option>
+                <option value="Gustav Klimt">Gustav Klimt</option>
+                <option value="Edvard Munch">Edvard Munch</option>
+                <option value="Vincent van Gogh">Vincent van Gogh</option>
+              </select>
+              <div class="invalid-feedback">Seleccioná un artista.</div>
+            </div>
+
+            <button type="submit" class="btn boton-rojo">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JS de Bootstrap 5 (necesario para el menú hamburguesa y el modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript propio -->
+  <script src="js/codigo.js"></script>
+</body>
+</html>

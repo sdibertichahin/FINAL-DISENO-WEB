@@ -1,0 +1,379 @@
+/* =====================================================
+   FUERA DE MARCO — estilos.css
+   ===================================================== */
+
+/* 1. FUENTES (Google Fonts con @import)
+   Archivo 700 y 800 → títulos | Inter 400 y 600 → textos */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;600&display=swap');
+
+
+/* 2. VARIABLES (paleta de la referencia + fuentes) */
+:root {
+  --rojo: #DA4F48;
+  --celeste: #8BD4DD;
+  --amarillo: #F7CC45;
+  --crema: #E7E3D7;
+  --negro: #000000;
+  --rosa: #CB5089;
+  --petroleo: #476E79;
+
+  --fuente-titulos: 'Archivo', sans-serif;
+  --fuente-texto: 'Inter', sans-serif;
+}
+
+
+/* 3. BASE */
+body {
+  background-color: var(--crema);
+  color: var(--negro);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h5 {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  color: var(--negro);
+}
+
+.texto-rojo {
+  color: var(--rojo);
+}
+
+/* Etiquetas chicas en mayúscula (movimiento, secciones, datos) */
+.etiqueta {
+  font-family: var(--fuente-texto);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+
+/* 4. BOTONES (sobrescribe la clase .btn de Bootstrap) */
+.btn {
+  border-radius: 0;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.boton-negro {
+  background-color: var(--negro);
+  color: var(--crema);
+  border: 2px solid var(--negro);
+}
+
+.boton-negro:hover {
+  background-color: var(--rojo);
+  border-color: var(--rojo);
+  color: var(--negro);
+}
+
+.boton-borde {
+  background-color: transparent;
+  color: var(--negro);
+  border: 2px solid var(--negro);
+}
+
+.boton-borde:hover {
+  background-color: var(--negro);
+  color: var(--crema);
+}
+
+.boton-rojo {
+  background-color: var(--rojo);
+  color: var(--negro);
+  border: 2px solid var(--negro);
+  width: 100%;
+}
+
+.boton-rojo:hover {
+  background-color: var(--negro);
+  color: var(--crema);
+}
+
+
+/* 5. NAVBAR */
+.barra {
+  background-color: var(--crema);
+}
+
+.marca {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--negro);
+}
+
+.marca:hover {
+  color: var(--negro);
+}
+
+/* Cuadradito rojo antes del nombre */
+.cuadrado-rojo {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--rojo);
+  margin-right: 0.5rem;
+}
+
+/* Sobrescribe los links de Bootstrap */
+.navbar .nav-link {
+  color: var(--negro);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--rojo);
+}
+
+/* Sobrescribe el botón hamburguesa de Bootstrap */
+.navbar-toggler {
+  border: 2px solid var(--negro);
+  border-radius: 0;
+}
+
+
+/* 6. HERO / ENCABEZADO */
+.titulo-hero {
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Sobrescribe la clase .lead de Bootstrap */
+.lead {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.texto-hero {
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+/* Bloque amarillo con relleno desparejo: la obra queda "fuera de centro" */
+.marco-amarillo {
+  background-color: var(--amarillo);
+  padding: 3rem 1.25rem 1.25rem 3rem;
+}
+
+.figure-caption {
+  color: var(--negro);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+
+/* 7. FRANJA DE COLORES (firma visual) */
+.franja-color {
+  width: 16.66%;
+  height: 14px;
+}
+
+.fondo-rojo { background-color: var(--rojo); }
+.fondo-celeste { background-color: var(--celeste); }
+.fondo-amarillo { background-color: var(--amarillo); }
+.fondo-negro { background-color: var(--negro); }
+.fondo-rosa { background-color: var(--rosa); }
+.fondo-petroleo {
+  background-color: var(--petroleo);
+  color: var(--crema);
+}
+
+
+/* 8. TÍTULOS DE SECCIÓN */
+.seccion {
+  padding: 5rem 0;
+}
+
+.titulo-seccion {
+  font-size: 2.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+
+/* 9. TARJETAS DE ARTISTAS */
+.tarjeta {
+  background-color: var(--crema);
+  transition: all 0.3s ease;
+}
+
+.tarjeta-numero {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.tarjeta-nombre {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-texto {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Hover: la tarjeta se llena con el color de su artista */
+.tarjeta-celeste:hover { background-color: var(--celeste); }
+.tarjeta-amarillo:hover { background-color: var(--amarillo); }
+.tarjeta-rosa:hover { background-color: var(--rosa); }
+.tarjeta-petroleo:hover {
+  background-color: var(--petroleo);
+  color: var(--crema);
+}
+
+.tarjeta-petroleo:hover .tarjeta-nombre {
+  color: var(--crema);
+}
+
+
+/* 10. OBRAS */
+.obra {
+  background-color: var(--crema);
+  margin-bottom: 3rem;
+}
+
+.obra-texto {
+  padding: 2rem;
+}
+
+.numero-obra {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.titulo-obra {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.datos-obra {
+  font-size: 0.9rem;
+}
+
+/* Línea superior gruesa con el color de cada artista */
+.borde-celeste { border-top: 10px solid var(--celeste); }
+.borde-amarillo { border-top: 10px solid var(--amarillo); }
+.borde-rosa { border-top: 10px solid var(--rosa); }
+.borde-petroleo { border-top: 10px solid var(--petroleo); }
+
+
+/* 11. SOBRE EL PROYECTO */
+.sobre {
+  background-color: var(--celeste);
+}
+
+.cita {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  border-left: 6px solid var(--negro);
+  padding-left: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+
+/* 12. FOOTER */
+.pie {
+  background-color: var(--negro);
+  color: var(--crema);
+  border-top: 8px solid var(--rojo);
+}
+
+.titulo-pie {
+  color: var(--rosa);
+}
+
+/* Lista de museos: nombre a la izquierda, ciudad a la derecha */
+.museos a {
+  color: var(--crema);
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.museos a:hover {
+  color: var(--rosa);
+}
+
+.museos span {
+  font-size: 0.85rem;
+}
+
+.marca-pie {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.links-pie a {
+  color: var(--crema);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.links-pie a:hover {
+  color: var(--rosa);
+}
+
+.legal {
+  font-size: 0.8rem;
+}
+
+
+/* 13. MODAL Y FORMULARIO (sobrescribe estilos de Bootstrap) */
+.modal-content {
+  background-color: var(--crema);
+  border: 3px solid var(--negro);
+  border-radius: 0;
+}
+
+.modal-header {
+  border-bottom: 3px solid var(--negro);
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.form-control,
+.form-select {
+  border: 2px solid var(--negro);
+  border-radius: 0;
+}
