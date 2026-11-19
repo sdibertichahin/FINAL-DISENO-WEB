@@ -273,12 +273,18 @@ h1, h2, h3, h5 {
   font-size: 0.9rem;
 }
 
-/* Línea superior gruesa con el color de cada artista */
-.borde-celeste { border-top: 10px solid var(--celeste); }
-.borde-amarillo { border-top: 10px solid var(--amarillo); }
-.borde-rosa { border-top: 10px solid var(--rosa); }
-.borde-petroleo { border-top: 10px solid var(--petroleo); }
+/* Fondo de color en el bloque de texto de cada obra */
+.obra-celeste { background-color: var(--celeste); }
+.obra-amarillo { background-color: var(--amarillo); }
+.obra-rosa { background-color: var(--rosa); }
+.obra-petroleo {
+  background-color: var(--petroleo);
+  color: var(--crema);
+}
 
+.obra-petroleo .titulo-obra {
+  color: var(--crema);
+}
 
 /* 11. SOBRE EL PROYECTO */
 .sobre {
