@@ -178,12 +178,7 @@ h1, h2, h3, h5 {
 
 
 /* 7. FRANJA DE COLORES (firma visual) */
-.franja-color {
-  width: 16.66%;
-  height: 14px;
-}
 
-.fondo-rojo { background-color: var(--rojo); }
 .fondo-celeste { background-color: var(--celeste); }
 .fondo-amarillo { background-color: var(--amarillo); }
 .fondo-negro { background-color: var(--negro); }
